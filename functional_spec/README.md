@@ -1,47 +1,34 @@
-# Functional Suite
+# Parking Lot
+Parking lot can hold up to 'n' cars at any given point in time. Each slot is
+given a number starting at 1 increasing with increasing distance from the entry point
+in steps of one. It's an automated ticketing system that allows to manage parking lot without human intervention.
 
-`functional_spec/` contains the Rspec/Aruba based automated testing suite that will validate the correctness of your program for the sample input and output.
+### Assumptions
+1. Number Plate is unique for every vehicle.
+2. We will create parking lot only once throughout the application, i.e `create_parking_lot`.
+3. `create_parking_lot` will be the first command in the input file, otherwise application will through the exception.
+3. One slot is provided to the single car.
+4. Default color for the vehicle is `noColor`, if not supplied.
+5. `-1` indicates the invalid slot number.
 
-Please to add specs as needed when building your solution.
+### Application Flow
+1. `create_parking_lot` is used to create the parking lot, this command will be used once though-out the application. 
+2. `park` is used to park the vehicle at the available slot.
+3. `leave` will un-park the vehicle and return the charges of the parking, provided vehicle is already present in the parking lot.
+4. `status` will display the parking lot.
+5.  We have used the `ReentrantLock` for the better communication between threads performing parking operations.
 
-We do not support Windows at this point in time. If you don't have access to an OSX or Linux machine, we recommend  setting up a Linux machine you can develop against using something like [VirtualBox](https://www.virtualbox.org/) or [Docker](https://docs.docker.com/docker-for-windows/#test-your-installation).
+### Test
+1. We can run `./gradlew test`  for running test cases
 
-This needs [Ruby to be installed](https://www.ruby-lang.org/en/documentation/installation/), followed by some libraries. The steps are listed below.
+### Setup Dependencies
+1. Java : JDK1.8
+2. Build Tool : Gradle 4.10.3
+3. Junit : 4.12
+4. Mockito : 2.7.22
 
-## Setup
 
-First, install [Ruby](https://www.ruby-lang.org/en/documentation/installation/). Then run the following commands under the `functional_spec` dir.
-
-```
-functional_spec $ ruby -v # confirm Ruby present
-ruby 2.5.1p57 (2018-03-29 revision 63029) [x86_64-darwin17]
-functional_spec $ gem install bundler # install bundler to manage dependencies
-Successfully installed bundler-1.16.1
-Parsing documentation for bundler-1.16.1
-Done installing documentation for bundler after 2 seconds
-1 gem installed
-functional_spec $ bundle install # install dependencies
-...
-...
-Bundle complete! 4 Gemfile dependencies, 23 gems now installed.
-Use `bundle info [gemname]` to see where a bundled gem is installed.
-functional_spec $ 
-
-```
-
-## Usage
-
-You can run the full suite from `parking_lot` by doing
-```
-parking_lot $ bin/run_functional_specs
-```
-
-You can run the full suite directly from `parking_lot/functional_spec` by doing
-```
-parking_lot/functional_spec $ bundle exec rake spec:functional
-```
-
-You can run a specific test from `parking_lot/functional_spec` by providing the spec file and line number. In this example we're running the `can create a parking lot` test.
-```
-parking_lot/functional_spec $ PATH=$PATH:../bin bundle exec rspec spec/parking_lot_spec.rb:5
-```
+### Start Application
+1. ApplicationLaucher is the main entry for application.
+2. we can execute the command `bin/parking_lot/<input_file_path>` to run the application.
+3. `bin/setup` for build and test the application.
