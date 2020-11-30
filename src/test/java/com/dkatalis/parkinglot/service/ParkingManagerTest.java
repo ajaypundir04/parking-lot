@@ -1,11 +1,8 @@
 package com.dkatalis.parkinglot.service;
 
-import com.dkatalis.parkinglot.constants.VehicleSize;
+import com.dkatalis.parkinglot.constant.VehicleSize;
 import com.dkatalis.parkinglot.model.Car;
 import com.dkatalis.parkinglot.model.ParkingSpot;
-import com.dkatalis.parkinglot.service.BillCalculator;
-import com.dkatalis.parkinglot.service.ParkingManager;
-import com.dkatalis.parkinglot.service.ParkingStrategy;
 import com.dkatalis.parkinglot.service.impl.ParkingManagerImpl;
 import org.junit.Assert;
 import org.junit.Before;

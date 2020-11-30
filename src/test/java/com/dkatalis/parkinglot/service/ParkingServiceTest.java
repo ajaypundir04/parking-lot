@@ -1,6 +1,6 @@
 package com.dkatalis.parkinglot.service;
 
-import com.dkatalis.parkinglot.constants.VehicleSize;
+import com.dkatalis.parkinglot.constant.VehicleSize;
 import com.dkatalis.parkinglot.model.Car;
 import com.dkatalis.parkinglot.model.ParkingSpot;
 import com.dkatalis.parkinglot.model.Vehicle;

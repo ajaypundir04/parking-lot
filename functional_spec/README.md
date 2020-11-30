@@ -30,5 +30,5 @@ in steps of one. It's an automated ticketing system that allows to manage parkin
 
 ### Start Application
 1. ApplicationLaucher is the main entry for application.
-2. we can execute the command `bin/parking_lot/<input_file_path>` to run the application.
+2. we can execute the command `bin/parking_lot/<input_file_path>` to run the application. Eg: `bin/parking_lot src/main/resources/file_inputs.txt`
 3. `bin/setup` for build and test the application.
