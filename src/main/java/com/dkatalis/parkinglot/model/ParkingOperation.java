@@ -1,6 +1,6 @@
 package com.dkatalis.parkinglot.model;
 
-import com.dkatalis.parkinglot.constants.ParkingCommand;
+import com.dkatalis.parkinglot.constant.ParkingCommand;
 
 import java.util.Arrays;
 
