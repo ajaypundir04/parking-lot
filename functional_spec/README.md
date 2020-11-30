@@ -1,7 +1,6 @@
 # Parking Lot
-Parking lot can hold up to 'n' cars at any given point in time. Each slot is
-given a number starting at 1 increasing with increasing distance from the entry point
-in steps of one. It's an automated ticketing system that allows to manage parking lot without human intervention.
+Parking lot can hold up to 'n' cars at any given point in time. 
+Each slot is given a number starting at 1 increasing with increasing distance from the entry point in steps of one. It's an automated ticketing system that allows to manage parking lot without human intervention.
 
 ### Assumptions
 1. Number Plate is unique for every vehicle.
